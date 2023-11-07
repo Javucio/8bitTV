@@ -1,0 +1,1 @@
+while :; do (for file in /channel/channel2/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://back/iptv/channel2; done); done

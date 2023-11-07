@@ -1,0 +1,151 @@
+version: '3.5'
+
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - ./db:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: somewordpress
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+
+   front:
+     depends_on:
+       - db
+     image: wordpress:latest
+     volumes:
+       - ./front:/var/www/html
+     ports:
+       - "80:80"
+     restart: always
+     environment:
+       WORDPRESS_DB_HOST: db:3306
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: wordpress
+       WORDPRESS_DB_NAME: wordpress
+
+#   adminer:
+#     image: adminer:latest
+#     user: root
+#     depends_on:
+#       - db
+#     restart: always
+#     ports:
+#       - "8082:8080"
+#     environment:
+#       ADMINER_DEFAULT_SERVER: db
+
+   back: 
+     image: tiangolo/nginx-rtmp
+     depends_on:
+       - front
+     volumes:
+       - ./conf/nginx.conf:/etc/nginx/nginx.conf
+       - ./channel:/channel
+     expose:
+       - "8070"
+     ports:
+       - "8070:8070"
+     restart: always
+     
+   channel1:
+     depends_on:
+       - back
+     image: jrottenberg/ffmpeg
+     restart: always
+     volumes:
+       - ./channel:/channel
+       - ./conf:/conf
+     entrypoint: bash
+     command: "/conf/channel1.sh"
+     
+   channel2:
+     depends_on:
+       - back
+     image: jrottenberg/ffmpeg
+     restart: always
+     volumes:
+       - ./channel:/channel
+       - ./conf:/conf
+     entrypoint: bash
+     command: "/conf/channel2.sh"
+
+   channel3:
+     depends_on:
+       - back
+     image: jrottenberg/ffmpeg
+     restart: always
+     volumes:
+       - ./channel:/channel
+       - ./conf:/conf
+     entrypoint: bash
+     command: "/conf/channel3.sh"
+     
+   channel4:
+     depends_on:
+       - back
+     image: jrottenberg/ffmpeg
+     restart: always
+     volumes:
+       - ./channel:/channel
+       - ./conf:/conf
+     entrypoint: bash
+     command: "/conf/channel4.sh"
+
+   channel5:
+     depends_on:
+       - back
+     image: jrottenberg/ffmpeg
+     restart: always
+     volumes:
+       - ./channel:/channel
+       - ./conf:/conf
+     entrypoint: bash
+     command: "/conf/channel5.sh"
+     
+   channel6:
+     depends_on:
+       - back
+     image: jrottenberg/ffmpeg
+     restart: always
+     volumes:
+       - ./channel:/channel
+       - ./conf:/conf
+     entrypoint: bash
+     command: "/conf/channel6.sh"
+     
+   channel7:
+     depends_on:
+       - back
+     image: jrottenberg/ffmpeg
+     restart: always
+     volumes:
+       - ./channel:/channel
+       - ./conf:/conf
+     entrypoint: bash
+     command: "/conf/channel7.sh"
+     
+   channel8:
+     depends_on:
+       - back
+     image: jrottenberg/ffmpeg
+     restart: always
+     volumes:
+       - ./channel:/channel
+       - ./conf:/conf
+     entrypoint: bash
+     command: "/conf/channel8.sh"
+     
+   channel9:
+     depends_on:
+       - back
+     image: jrottenberg/ffmpeg
+     restart: always
+     volumes:
+       - ./channel:/channel
+       - ./conf:/conf
+     entrypoint: bash
+     command: "/conf/channel9.sh"

@@ -1,0 +1,1019 @@
+# Copyright (C) 2017 focus
+# This file is distributed under the same license as the focus package.
+msgid ""
+msgstr ""
+"Project-Id-Version: focus\n"
+"Report-Msgid-Bugs-To: http://www.siteorigin.com\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: SiteOrigin <support@siteorigin.com>\n"
+"Language-Team: SiteOrigin <support@siteorigin.com>\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: 404.php:16, inc/settings.php:157
+msgid "Page Not Found"
+msgstr ""
+
+#: 404.php:28, inc/settings.php:222
+msgid "We couldn't find the page you were looking for."
+msgstr ""
+
+#: 404.php:35
+msgid "Most Used Categories"
+msgstr ""
+
+#: 404.php:43
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: admin/about/page-free.php:1
+msgid "Forever Free"
+msgstr ""
+
+#: admin/about/page-free.php:3
+msgid "Focus is a completely free WordPress theme."
+msgstr ""
+
+#: admin/about/page-free.php:4
+msgid "We'll continue developing and enhancing it for years to come."
+msgstr ""
+
+#: admin/about/page-github.php:1
+msgid "Developed on Github"
+msgstr ""
+
+#: admin/about/page-github.php:4
+msgid "Focus is actively %sdeveloped on Github%s."
+msgstr ""
+
+#: admin/about/page-github.php:5
+msgid "You can watch what's happening with its development and even make contributions yourself."
+msgstr ""
+
+#: admin/about/page-page-builder.php:1
+msgid "Enhanced by Page Builder"
+msgstr ""
+
+#: admin/about/page-page-builder.php:3
+msgid "Focus integrates, beautifully, with our %sfree Page Builder%s plugin."
+msgstr ""
+
+#: admin/about/page-page-builder.php:4
+msgid "This powerful plugin gives you full drag and drop capabilities right inside Focus."
+msgstr ""
+
+#: admin/about/page-support.php:1
+msgid "Support and Documentation"
+msgstr ""
+
+#: admin/about/page-support.php:3
+msgid "Our dedicated support team is ready to help you over on our %sfree support forums%s."
+msgstr ""
+
+#: admin/about/page-support.php:4
+msgid "You can also read through the %sFocus documentation%s to get to know it even faster."
+msgstr ""
+
+#: comments.php:32
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:39, comments.php:59
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:40, comments.php:60
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:41, comments.php:61
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:71
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:106
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:157
+msgid "Post Sidebar"
+msgstr ""
+
+#: functions.php:166
+msgid "Page Sidebar"
+msgstr ""
+
+#: functions.php:175
+msgid "Footer Widgets"
+msgstr ""
+
+#: functions.php:301
+msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
+msgstr ""
+
+#: functions.php:322
+msgid "Theme By <a href=\"%s\">SiteOrigin</a>"
+msgstr ""
+
+#: functions.php:398
+msgid "SiteOrigin Page Builder"
+msgstr ""
+
+#: functions.php:403
+msgid "SiteOrigin Widgets Bundle"
+msgstr ""
+
+#: functions.php:408
+msgid "SiteOrigin CSS"
+msgstr ""
+
+#: functions.php:413
+msgid "Focus Videos"
+msgstr ""
+
+#: header.php:35, inc/mobilenav/mobilenav.php:15, inc/mobilenav/mobilenav.php:63
+msgid "Menu"
+msgstr ""
+
+#: header.php:36, header.php:36
+msgid "Skip to content"
+msgstr ""
+
+#: image.php:34, single.php:54
+msgid "Pages:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:327
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:328
+msgid "Install Plugins"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:330
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:332
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:333
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:334
+msgid "/*translators:1:pluginnames.*/This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:340
+msgid "/*translators:1:pluginnames.*/This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:346
+msgid "/*translators:1:pluginnames.*/The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:352
+msgid "/*translators:1:pluginnames.*/There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:358
+msgid "/*translators:1:pluginnames.*/The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:364
+msgid "/*translators:1:pluginnames.*/The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:370
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:375
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:380
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:385
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:386, inc/class-tgm-plugin-activation.php:827, inc/class-tgm-plugin-activation.php:2533, inc/class-tgm-plugin-activation.php:3580
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:387, inc/class-tgm-plugin-activation.php:3159
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:388, inc/class-tgm-plugin-activation.php:2952
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:390
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:392
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:394
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:395
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:396
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:397
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:522
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:523
+msgid "Update Required"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:934
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:934, inc/class-tgm-plugin-activation.php:937
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:937
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1121, inc/class-tgm-plugin-activation.php:2948
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1982
+msgid "TGMPA v%s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2273
+msgid "Required"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2276
+msgid "Recommended"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2292
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2295
+msgid "External Source"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2298
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2315
+msgid "Not Installed"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2319
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2321
+msgid "Active"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2327
+msgid "Required Update not Available"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2330
+msgid "Requires Update"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2333
+msgid "Update recommended"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2342
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2388
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:2392
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:2396
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:2400
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:2482
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2490
+msgid "Installed version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2498
+msgid "Minimum required version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2510
+msgid "Available version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2533
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2547
+msgid "Plugin"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2548
+msgid "Source"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2549
+msgid "Type"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2553
+msgid "Version"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2554
+msgid "Status"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2603
+msgid "Install %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2608
+msgid "Update %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2614
+msgid "Activate %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2684
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2717
+msgid "Install"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2723
+msgid "Update"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2726
+msgid "Activate"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2757
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2759
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2800
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2802
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2908
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2934
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3158
+msgid "Plugin activation failed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3498
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3501
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3503
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3507
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3509
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3509, inc/class-tgm-plugin-activation.php:3517
+msgid "Show Details"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3509, inc/class-tgm-plugin-activation.php:3517
+msgid "Hide Details"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3510
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3512
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3515
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3517
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3518
+msgid "All installations have been completed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3520
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/legacy.php:5, inc/legacy.php:6
+msgid "Theme Settings"
+msgstr ""
+
+#: inc/legacy.php:17
+msgid "Focus Settings Have Moved"
+msgstr ""
+
+#: inc/legacy.php:19
+msgid "Our theme settings now take advantage of the WordPress customizer."
+msgstr ""
+
+#: inc/legacy.php:20
+msgid "Navigate to <strong>Appearance > Customize > Theme Settings</strong> to access theme settings."
+msgstr ""
+
+#: inc/mobilenav/mobilenav.php:16, inc/mobilenav/mobilenav.php:64
+msgid "Back"
+msgstr ""
+
+#: inc/mobilenav/mobilenav.php:17, inc/mobilenav/mobilenav.php:65
+msgid "Close"
+msgstr ""
+
+#: inc/mobilenav/mobilenav.php:24, searchform.php:10, searchform.php:12
+msgid "Search"
+msgstr ""
+
+#: inc/settings.php:6
+msgid "General"
+msgstr ""
+
+#: inc/settings.php:7
+msgid "Slider"
+msgstr ""
+
+#: inc/settings.php:8, inc/video.php:8
+msgid "Video"
+msgstr ""
+
+#: inc/settings.php:9
+msgid "Icons"
+msgstr ""
+
+#: inc/settings.php:10
+msgid "Layout"
+msgstr ""
+
+#: inc/settings.php:11
+msgid "Text"
+msgstr ""
+
+#: inc/settings.php:12
+msgid "Main Menu"
+msgstr ""
+
+#: inc/settings.php:13
+msgid "Call To Action"
+msgstr ""
+
+#: inc/settings.php:14
+msgid "Comments"
+msgstr ""
+
+#: inc/settings.php:20
+msgid "Logo"
+msgstr ""
+
+#: inc/settings.php:21
+msgid "Choose Logo Image"
+msgstr ""
+
+#: inc/settings.php:22, inc/settings.php:28
+msgid "Set Logo"
+msgstr ""
+
+#: inc/settings.php:23
+msgid "Logo displayed in your masthead."
+msgstr ""
+
+#: inc/settings.php:26
+msgid "Retina Logo"
+msgstr ""
+
+#: inc/settings.php:27
+msgid "Choose Retina Logo Image"
+msgstr ""
+
+#: inc/settings.php:29
+msgid "A double sized logo to use on retina devices."
+msgstr ""
+
+#: inc/settings.php:32
+msgid "Scale Logo"
+msgstr ""
+
+#: inc/settings.php:33
+msgid "If used, scale the logo to fit the menu bar"
+msgstr ""
+
+#: inc/settings.php:36
+msgid "SiteOrigin Attribution"
+msgstr ""
+
+#: inc/settings.php:37
+msgid "Add or remove a link to SiteOrigin in your footer."
+msgstr ""
+
+#: inc/settings.php:41
+msgid "Display Post Author"
+msgstr ""
+
+#: inc/settings.php:42
+msgid "Displays post author information on a post page."
+msgstr ""
+
+#: inc/settings.php:45
+msgid "Display Post Navigation"
+msgstr ""
+
+#: inc/settings.php:46
+msgid "Display next and previous post links on at the bottom of post single pages."
+msgstr ""
+
+#: inc/settings.php:53
+msgid "Home Page Slider"
+msgstr ""
+
+#: inc/settings.php:54
+msgid "Display a posts slider on the home page."
+msgstr ""
+
+#: inc/settings.php:57
+msgid "Post Count"
+msgstr ""
+
+#: inc/settings.php:58
+msgid "The number of posts to display."
+msgstr ""
+
+#: inc/settings.php:62
+msgid "All"
+msgstr ""
+
+#: inc/settings.php:71
+msgid "Post Category"
+msgstr ""
+
+#: inc/settings.php:72
+msgid "Which category to fetch the video posts from."
+msgstr ""
+
+#: inc/settings.php:76
+msgid "Posts Order"
+msgstr ""
+
+#: inc/settings.php:77
+msgid "The order in which to display the posts."
+msgstr ""
+
+#: inc/settings.php:79
+msgid "Date"
+msgstr ""
+
+#: inc/settings.php:80
+msgid "Title"
+msgstr ""
+
+#: inc/settings.php:81
+msgid "Random"
+msgstr ""
+
+#: inc/settings.php:82
+msgid "Comment Count"
+msgstr ""
+
+#: inc/settings.php:90
+msgid "Default Thumbnail for Video Grid"
+msgstr ""
+
+#: inc/settings.php:91, inc/settings.php:107
+msgid "Add a custom play button to self hosted video."
+msgstr ""
+
+#: inc/settings.php:94
+msgid "Video By Text"
+msgstr ""
+
+#: inc/settings.php:95
+msgid "Change the text \"video by\" on single post pages."
+msgstr ""
+
+#: inc/settings.php:98
+msgid "Autoplay Videos"
+msgstr ""
+
+#: inc/settings.php:99
+msgid "Videos start playing as soon as the video page is loaded."
+msgstr ""
+
+#: inc/settings.php:102
+msgid "Hide Related Videos"
+msgstr ""
+
+#: inc/settings.php:103
+msgid "Hides related videos after a YouTube or Vimeo Plus video finishes."
+msgstr ""
+
+#: inc/settings.php:106
+msgid "Play Button"
+msgstr ""
+
+#: inc/settings.php:110
+msgid "Premium Access Rights"
+msgstr ""
+
+#: inc/settings.php:111
+msgid "The access rights required to view the premium version of a video. Can be used to integrate with plugins like <a href=\"http://www.s2member.com/3000.html\">S2Member</a>"
+msgstr ""
+
+#: inc/settings.php:113
+msgid "S2Member - Level 4 Members"
+msgstr ""
+
+#: inc/settings.php:114
+msgid "S2Member - Level 3 Members"
+msgstr ""
+
+#: inc/settings.php:115
+msgid "S2Member - Level 2 Members"
+msgstr ""
+
+#: inc/settings.php:116
+msgid "S2Member - Level 1 Members"
+msgstr ""
+
+#: inc/settings.php:117
+msgid "S2Member - Free Subscribers"
+msgstr ""
+
+#: inc/settings.php:125
+msgid "Post Navigation Arrows"
+msgstr ""
+
+#: inc/settings.php:126
+msgid "Display next and previous arrows in the post single header for easier navigation."
+msgstr ""
+
+#: inc/settings.php:129
+msgid "Masthead Search Icon"
+msgstr ""
+
+#: inc/settings.php:130
+msgid "Replace the search icon with an image."
+msgstr ""
+
+#: inc/settings.php:133
+msgid "Previous Post Icon"
+msgstr ""
+
+#: inc/settings.php:134
+msgid "Replace the previous arrow icon with an image in single posts."
+msgstr ""
+
+#: inc/settings.php:137
+msgid "Next Post Icon"
+msgstr ""
+
+#: inc/settings.php:138
+msgid "Replace the next arrow icon with an image in single posts."
+msgstr ""
+
+#: inc/settings.php:145
+msgid "Responsive Layout"
+msgstr ""
+
+#: inc/settings.php:146
+msgid "Make your site responsive."
+msgstr ""
+
+#: inc/settings.php:153
+msgid "No Search Results"
+msgstr ""
+
+#: inc/settings.php:154
+msgid "Text displayed on your no search results pages."
+msgstr ""
+
+#: inc/settings.php:158
+msgid "Text displayed on your 404 pages."
+msgstr ""
+
+#: inc/settings.php:161
+msgid "Latest Posts Headline"
+msgstr ""
+
+#: inc/settings.php:163
+msgid "Footer Copyright"
+msgstr ""
+
+#: inc/settings.php:164
+msgid "Text in your site footer."
+msgstr ""
+
+#: inc/settings.php:171
+msgid "Home Link"
+msgstr ""
+
+#: inc/settings.php:172
+msgid "Add a home link to your menu bar. Only applicable a custom menu hasn't been saved to the Primary Menu location."
+msgstr ""
+
+#: inc/settings.php:175
+msgid "Menu Search"
+msgstr ""
+
+#: inc/settings.php:176
+msgid "Add search box to menu bar."
+msgstr ""
+
+#: inc/settings.php:183
+msgid "CTA Text"
+msgstr ""
+
+#: inc/settings.php:184
+msgid "CTA Button Text"
+msgstr ""
+
+#: inc/settings.php:185
+msgid "CTA Button URL"
+msgstr ""
+
+#: inc/settings.php:191
+msgid "Ajax Comments"
+msgstr ""
+
+#: inc/settings.php:192
+msgid "Lets your users post comments without interrupting video play."
+msgstr ""
+
+#: inc/settings.php:196
+msgid "Hide Page Comments"
+msgstr ""
+
+#: inc/settings.php:197
+msgid "Automatically hides the comments and comment form on pages."
+msgstr ""
+
+#: inc/settings.php:198, inc/settings.php:203
+msgid "Hide"
+msgstr ""
+
+#: inc/settings.php:201
+msgid "Hide Allowed Tags"
+msgstr ""
+
+#: inc/settings.php:202
+msgid "Hides allowed tags from the comment form."
+msgstr ""
+
+#: inc/settings.php:223, no-results.php:19
+msgid "We couldn't find any results for your query."
+msgstr ""
+
+#: inc/settings.php:224, index.php:27
+msgid "Latest Videos"
+msgstr ""
+
+#: inc/settings.php:267
+msgid "Focus is a great theme for showing off your videos. It supports videos hosted on other sites like YouTube and Vimeo through oEmbed. You can even self host your videos."
+msgstr ""
+
+#: inc/settings.php:286
+msgid "Focus Page Header"
+msgstr ""
+
+#: inc/settings.php:302
+msgid "Use First Page Builder Row"
+msgstr ""
+
+#: inc/settings.php:306
+msgid "Moves first row into the header. Page template must be set to Full Width - No Title."
+msgstr ""
+
+#: inc/template-tags.php:39
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:43
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr ""
+
+#: inc/template-tags.php:44
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr ""
+
+#: inc/template-tags.php:49
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: inc/template-tags.php:53
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/template-tags.php:78
+msgid "Pingback:"
+msgstr ""
+
+#: inc/template-tags.php:78
+msgid "(Edit)"
+msgstr ""
+
+#: inc/template-tags.php:90
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/template-tags.php:109
+msgid "Edit"
+msgstr ""
+
+#: inc/template-tags.php:137
+msgid "Posted On %s in %s with %s."
+msgstr ""
+
+#: inc/template-tags.php:145
+msgid "One Comment"
+msgid_plural "%s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/template-tags.php:148
+msgid "Tagged: "
+msgstr ""
+
+#: inc/video.php:18
+msgid "Please <a href=\"%s\">install</a> the focus video plugin to edit this video setting."
+msgstr ""
+
+#: inc/video.php:77
+msgid "play"
+msgstr ""
+
+#: inc/video.php:78
+msgid "pause"
+msgstr ""
+
+#: inc/video.php:79
+msgid "stop"
+msgstr ""
+
+#: inc/video.php:81
+msgid "full screen"
+msgstr ""
+
+#: inc/video.php:82
+msgid "restore screen"
+msgstr ""
+
+#: inc/video.php:84
+msgid "mute"
+msgstr ""
+
+#: inc/video.php:85
+msgid "unmute"
+msgstr ""
+
+#: inc/widgets.php:9
+msgid "Focus Post Author Widget"
+msgstr ""
+
+#: inc/widgets.php:10
+msgid "Displays the post author."
+msgstr ""
+
+#: inc/widgets.php:16
+msgid "This widget doesn't have any settings"
+msgstr ""
+
+#: inc/widgets.php:34
+msgid "Video By"
+msgstr ""
+
+#: infinite-loop.php:10, loop.php:12, loops/loop-grid.php:17
+msgid "Untitled"
+msgstr ""
+
+#: loops/loop-slider.php:24, slider.php:15
+msgid "Play"
+msgstr ""
+
+#: no-results.php:15
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
