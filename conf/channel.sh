@@ -1,1 +1,55 @@
-while :; do (for file in /channel/channel1/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream; done); done & while :; do (for file in /channel/channel2/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream2; done); done & while :; do (for file in /channel/channel3/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -map 0:0 -map 0:2 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream3; done); done & while :; do (for file in /channel/channel4/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream4; done); done & while :; do (for file in /channel/channel5/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream5; done); done & while :; do (for file in /channel/channel6/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream6; done); done & while :; do (for file in /channel/channel7/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream7; done); done & while :; do (for file in /channel/channel8/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream8; done); done & while :; do (for file in /channel/channel9/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream9; done); done & while :; do (for file in /channel/channel10/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream10; done); done & while :; do (for file in /channel/channel11/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream11; done); done & while :; do (for file in /channel/channel12/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream12; done); done & while :; do (for file in /channel/channel13/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream13; done); done & while :; do (for file in /channel/channel14/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream14; done); done & while :; do (for file in /channel/channel15/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream15; done); done &while :; do (for file in /channel/channel16/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream16; done); done & while :; do (for file in /channel/channel17/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream17; done); done & while :; do (for file in /channel/channel18/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream18; done); done & while :; do (for file in /channel/channel19/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream19; done); done & while :; do (for file in /channel/channel20/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream20; done); done & while :; do (for file in /channel/channel21/*.*; do ffmpeg -re -i "$file" -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://nginx/show/stream21; done); done
+#!/bin/bash
+
+# Función para procesar un canal
+process_channel() {
+  local channel=$1
+  local stream_url=$2
+
+  echo "Iniciando transmisión para $channel hacia $stream_url"
+
+  while :; do
+    for file in /channel/$channel/*.*; do
+      echo "Procesando archivo $file para $channel"
+      ffmpeg -re -i "$file" \
+        -vcodec libx264 \
+        -vprofile baseline \
+        -g 30 \
+        -acodec aac \
+        -strict -2 \
+        -f flv "$stream_url"
+    done
+  done
+}
+
+# Lista de canales y sus URLs de transmisión
+declare -A channels=(
+  ["channel1"]="rtmp://nginx/show/stream1"
+  ["channel2"]="rtmp://nginx/show/stream2"
+  ["channel3"]="rtmp://nginx/show/stream3"
+  ["channel4"]="rtmp://nginx/show/stream4"
+  ["channel5"]="rtmp://nginx/show/stream5"
+  ["channel6"]="rtmp://nginx/show/stream6"
+  ["channel7"]="rtmp://nginx/show/stream7"
+  ["channel8"]="rtmp://nginx/show/stream8"
+  ["channel9"]="rtmp://nginx/show/stream9"
+  ["channel10"]="rtmp://nginx/show/stream10"
+  ["channel11"]="rtmp://nginx/show/stream11"
+  ["channel12"]="rtmp://nginx/show/stream12"
+  ["channel13"]="rtmp://nginx/show/stream13"
+  ["channel14"]="rtmp://nginx/show/stream14"
+  ["channel15"]="rtmp://nginx/show/stream15"
+  ["channel16"]="rtmp://nginx/show/stream16"
+  ["channel17"]="rtmp://nginx/show/stream17"
+  ["channel18"]="rtmp://nginx/show/stream18"
+  ["channel19"]="rtmp://nginx/show/stream19"
+  ["channel20"]="rtmp://nginx/show/stream20"
+  ["channel21"]="rtmp://nginx/show/stream21"
+)
+
+# Iniciar transmisión para cada canal en segundo plano
+for channel in "${!channels[@]}"; do
+  process_channel "$channel" "${channels[$channel]}" &
+done
+
+# Esperar a que todos los procesos en segundo plano terminen
+wait
