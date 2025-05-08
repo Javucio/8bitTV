@@ -500,7 +500,7 @@ function wp_iframe( $content_func /* ... */ ) {
 	?>
 <script type="text/javascript">
 addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
-var ajaxurl = '<?php echo admin_url( 'admin-ajax.php', 'relative' ); ?>', pagenow = 'media-upload-popup', adminpage = 'media-upload-popup',
+var ajaxurl = '<?php echo esc_js( admin_url( 'admin-ajax.php', 'relative' ) ); ?>', pagenow = 'media-upload-popup', adminpage = 'media-upload-popup',
 isRtl = <?php echo (int) is_rtl(); ?>;
 </script>
 	<?php
@@ -3048,7 +3048,7 @@ function edit_form_image_editor( $post ) {
 			'tinymce'       => false,
 			'quicktags'     => $quicktags_settings,
 		);
-	?>
+		?>
 
 	<label for="attachment_content"><strong><?php _e( 'Description' ); ?></strong>
 		<?php
@@ -3057,7 +3057,7 @@ function edit_form_image_editor( $post ) {
 		}
 		?>
 	</label>
-	<?php wp_editor( $post->post_content, 'attachment_content', $editor_args ); ?>
+	<?php wp_editor( format_to_edit( $post->post_content ), 'attachment_content', $editor_args ); ?>
 
 	</div>
 	<?php

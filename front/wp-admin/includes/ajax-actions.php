@@ -1423,6 +1423,7 @@ function wp_ajax_add_menu_item() {
 		$menu_obj = get_post( $menu_item_id );
 		if ( ! empty( $menu_obj->ID ) ) {
 			$menu_obj        = wp_setup_nav_menu_item( $menu_obj );
+			$menu_obj->title = empty( $menu_obj->title ) ? __( 'Menu Item' ) : $menu_obj->title;
 			$menu_obj->label = $menu_obj->title; // don't show "(pending)" in ajax-added items
 			$menu_items[]    = $menu_obj;
 		}
@@ -2311,7 +2312,7 @@ function wp_ajax_upload_attachment() {
 				'success' => false,
 				'data'    => array(
 					'message'  => __( 'Sorry, you are not allowed to upload files.' ),
-					'filename' => $_FILES['async-upload']['name'],
+					'filename' => esc_html( $_FILES['async-upload']['name'] ),
 				),
 			)
 		);
@@ -2327,7 +2328,7 @@ function wp_ajax_upload_attachment() {
 					'success' => false,
 					'data'    => array(
 						'message'  => __( 'Sorry, you are not allowed to attach files to this post.' ),
-						'filename' => $_FILES['async-upload']['name'],
+						'filename' => esc_html( $_FILES['async-upload']['name'] ),
 					),
 				)
 			);
@@ -2353,7 +2354,7 @@ function wp_ajax_upload_attachment() {
 					'success' => false,
 					'data'    => array(
 						'message'  => __( 'The uploaded file is not a valid image. Please try again.' ),
-						'filename' => $_FILES['async-upload']['name'],
+						'filename' => esc_html( $_FILES['async-upload']['name'] ),
 					),
 				)
 			);
@@ -2370,7 +2371,7 @@ function wp_ajax_upload_attachment() {
 				'success' => false,
 				'data'    => array(
 					'message'  => $attachment_id->get_error_message(),
-					'filename' => $_FILES['async-upload']['name'],
+					'filename' => esc_html( $_FILES['async-upload']['name'] ),
 				),
 			)
 		);
@@ -2512,6 +2513,10 @@ function wp_ajax_set_attachment_thumbnail() {
 
 	$thumbnail_id = (int) $_POST['thumbnail_id'];
 	if ( empty( $thumbnail_id ) ) {
+		wp_send_json_error();
+	}
+
+	if ( false === check_ajax_referer( 'set-attachment-thumbnail', '_ajax_nonce', false ) ) {
 		wp_send_json_error();
 	}
 
@@ -2754,7 +2759,7 @@ function wp_ajax_query_attachments() {
 
 	// Filter query clauses to include filenames.
 	if ( isset( $query['s'] ) ) {
-		add_filter( 'posts_clauses', '_filter_query_attachment_filenames' );
+		add_filter( 'wp_allow_query_attachment_by_filename', '__return_true' );
 	}
 
 	/**
@@ -3505,13 +3510,29 @@ function wp_ajax_parse_media_shortcode() {
 
 	$shortcode = wp_unslash( $_POST['shortcode'] );
 
+	// Only process previews for media related shortcodes:
+	$found_shortcodes = get_shortcode_tags_in_content( $shortcode );
+	$media_shortcodes = array(
+		'audio',
+		'embed',
+		'playlist',
+		'video',
+		'gallery',
+	);
+
+	$other_shortcodes = array_diff( $found_shortcodes, $media_shortcodes );
+
+	if ( ! empty( $other_shortcodes ) ) {
+		wp_send_json_error();
+	}
+
 	if ( ! empty( $_POST['post_ID'] ) ) {
 		$post = get_post( (int) $_POST['post_ID'] );
 	}
 
 	// the embed shortcode requires a post
 	if ( ! $post || ! current_user_can( 'edit_post', $post->ID ) ) {
-		if ( 'embed' === $shortcode ) {
+		if ( in_array( 'embed', $found_shortcodes, true ) ) {
 			wp_send_json_error();
 		}
 	} else {

@@ -244,9 +244,9 @@ class Custom_Background {
 </div>
 		<?php } ?>
 
-<h3><?php _e( 'Background Image' ); ?></h3>
+<h2><?php _e( 'Background Image' ); ?></h2>
 
-<table class="form-table">
+<table class="form-table" role="presentation">
 <tbody>
 <tr>
 <th scope="row"><?php _e( 'Preview' ); ?></th>
@@ -338,9 +338,9 @@ class Custom_Background {
 </tbody>
 </table>
 
-<h3><?php _e( 'Display Options' ); ?></h3>
+<h2><?php _e( 'Display Options' ); ?></h2>
 <form method="post">
-<table class="form-table">
+<table class="form-table" role="presentation">
 <tbody>
 		<?php if ( get_background_image() ) : ?>
 <input name="background-preset" type="hidden" value="custom">
@@ -574,6 +574,8 @@ class Custom_Background {
 	 * @deprecated 3.5.0
 	 */
 	public function wp_set_background_image() {
+		check_ajax_referer( 'custom-background' );
+
 		if ( ! current_user_can( 'edit_theme_options' ) || ! isset( $_POST['attachment_id'] ) ) {
 			exit;
 		}
