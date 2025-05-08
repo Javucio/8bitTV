@@ -23,7 +23,7 @@ process_channel() {
 
 # Lista de canales y sus URLs de transmisión
 declare -A channels=(
-  ["channel1"]="rtmp://nginx/show/stream1"
+  ["channel1"]="rtmp://back/show/stream1"
 )
 
 # Iniciar transmisión para cada canal en segundo plano
