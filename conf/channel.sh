@@ -16,14 +16,14 @@ process_channel() {
         -g 30 \
         -acodec aac \
         -strict -2 \
-        -f flv "$stream_url"
+        -f flv "$stream_url" || echo "Error al procesar $file para $channel"
     done
   done
 }
 
 # Lista de canales y sus URLs de transmisión
 declare -A channels=(
-  ["channel1"]="rtmp://back/show/stream1"
+  ["channel1"]="rtmp://back/iptv/stream1"
 )
 
 # Iniciar transmisión para cada canal en segundo plano
