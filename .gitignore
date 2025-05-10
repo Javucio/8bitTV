@@ -5,3 +5,6 @@ db/ibdata1
 db/ibtmp1
 db/mysql.sock
 channel/channel1/Dragon Ball 1x01 \[x265].mp4
+.DS_Store
+channel/channel1/Heidi - 001.mp4
+.gitignore
