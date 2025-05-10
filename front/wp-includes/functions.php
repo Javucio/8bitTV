@@ -1566,7 +1566,11 @@ function is_blog_installed() {
 			continue;
 		}
 
-		if ( ! $wpdb->get_results( "DESCRIBE $table;" ) ) {
+		$described_table = $wpdb->get_results( "DESCRIBE $table;" );
+		if (
+			( ! $described_table && empty( $wpdb->last_error ) ) ||
+			( is_array( $described_table ) && 0 === count( $described_table ) )
+		) {
 			continue;
 		}
 
@@ -1785,6 +1789,11 @@ function wp_mkdir_p( $target ) {
 
 	if ( file_exists( $target ) ) {
 		return @is_dir( $target );
+	}
+
+	// Do not allow path traversals.
+	if ( false !== strpos( $target, '../' ) || false !== strpos( $target, '..' . DIRECTORY_SEPARATOR ) ) {
+		return false;
 	}
 
 	// We need to find the permissions of the parent folder that exists and inherit that.
@@ -2916,10 +2925,12 @@ function wp_nonce_ays( $action ) {
 	} else {
 		$html = __( 'The link you followed has expired.' );
 		if ( wp_get_referer() ) {
-			$html .= '</p><p>';
-			$html .= sprintf(
+			$wp_http_referer = remove_query_arg( 'updated', wp_get_referer() );
+			$wp_http_referer = wp_validate_redirect( esc_url_raw( $wp_http_referer ) );
+			$html           .= '</p><p>';
+			$html           .= sprintf(
 				'<a href="%s">%s</a>',
-				esc_url( remove_query_arg( 'updated', wp_get_referer() ) ),
+				esc_url( $wp_http_referer ),
 				__( 'Please try again.' )
 			);
 		}
@@ -3000,9 +3011,9 @@ function wp_die( $message = '', $title = '', $args = array() ) {
 		 * @param callable $function Callback function name.
 		 */
 		$function = apply_filters( 'wp_die_json_handler', '_json_wp_die_handler' );
-	} elseif ( wp_is_jsonp_request() ) {
+	} elseif ( defined( 'REST_REQUEST' ) && REST_REQUEST && wp_is_jsonp_request() ) {
 		/**
-		 * Filters the callback for killing WordPress execution for JSONP requests.
+		 * Filters the callback for killing WordPress execution for JSONP REST requests.
 		 *
 		 * @since 5.2.0
 		 *
@@ -4885,6 +4896,9 @@ function iis7_supports_permalinks() {
  * @return int 0 means nothing is wrong, greater than 0 means something was wrong.
  */
 function validate_file( $file, $allowed_files = array() ) {
+	// Normalize path for Windows servers
+	$file = wp_normalize_path( $file );
+
 	// `../` on its own is not allowed:
 	if ( '../' === $file ) {
 		return 1;

@@ -2463,11 +2463,11 @@ div.star-holder {
 	position: relative;
 	height: 17px;
 	width: 100px;
-	background: url(../images/stars.png?ver=20121108) repeat-x bottom left;
+	background: url(../images/stars.png?ver=20121108) repeat-x bottom right;
 }
 
 div.star-holder .star-rating {
-	background: url(../images/stars.png?ver=20121108) repeat-x top left;
+	background: url(../images/stars.png?ver=20121108) repeat-x top right;
 	height: 17px;
 	float: right;
 }
@@ -2502,7 +2502,7 @@ div.star-holder .star-rating {
 }
 
 .rtl .star-rating .star-half {
-	transform: rotateY(180deg);
+	transform: rotateY(-180deg);
 }
 
 .star-rating .star-empty:before {
@@ -2656,10 +2656,15 @@ div.action-links {
 	left: 250px;
 	bottom: 0;
 	right: 0;
+	margin-top: 10px;
 	margin-left: 250px; /* FYI box */
 	padding: 10px 26px;
 	margin-bottom: -99939px; /* 60px less than the padding below to accommodate footer */
 	padding-bottom: 99999px; /* equal height column trick */
+}
+
+#section-holder .notice {
+	margin: 5px 0 15px;
 }
 
 #section-holder .updated {
@@ -3659,7 +3664,7 @@ img {
 	/* Back-compat for pre-3.8 */
 	div.star-holder,
 	div.star-holder .star-rating {
-		background: url(../images/stars-2x.png?ver=20121108) repeat-x bottom left;
+		background: url(../images/stars-2x.png?ver=20121108) repeat-x bottom right;
 		background-size: 21px 37px;
 	}
 

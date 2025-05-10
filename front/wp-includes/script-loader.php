@@ -94,7 +94,7 @@ function wp_default_packages_vendor( &$scripts ) {
 		'react'                       => '16.8.4',
 		'react-dom'                   => '16.8.4',
 		'moment'                      => '2.22.2',
-		'lodash'                      => '4.17.11',
+		'lodash'                      => '4.17.21',
 		'wp-polyfill-fetch'           => '3.0.0',
 		'wp-polyfill-formdata'        => '3.0.12',
 		'wp-polyfill-node-contains'   => '3.26.0-0',
@@ -225,39 +225,39 @@ function wp_default_packages_scripts( &$scripts ) {
 
 	$packages_versions = array(
 		'a11y'                               => '2.2.0',
-		'annotations'                        => '1.2.3',
+		'annotations'                        => '1.2.6',
 		'api-fetch'                          => '3.1.2',
-		'autop'                              => '2.0.0',
+		'autop'                              => '2.2.0',
 		'blob'                               => '2.3.0',
-		'block-editor'                       => '2.0.3',
-		'block-library'                      => '2.4.6',
+		'block-editor'                       => '2.0.6',
+		'block-library'                      => '2.4.12',
 		'block-serialization-default-parser' => '3.1.0',
-		'blocks'                             => '6.2.5',
-		'components'                         => '7.3.2',
+		'blocks'                             => '6.2.8',
+		'components'                         => '7.3.5',
 		'compose'                            => '3.2.0',
 		'core-data'                          => '2.2.2',
 		'data'                               => '4.4.0',
 		'date'                               => '3.2.0',
 		'deprecated'                         => '2.2.0',
-		'dom'                                => '2.2.5',
+		'dom'                                => '2.2.8',
 		'dom-ready'                          => '2.2.0',
-		'edit-post'                          => '3.3.6',
-		'editor'                             => '9.2.6',
+		'edit-post'                          => '3.3.12',
+		'editor'                             => '9.2.9',
 		'element'                            => '2.3.0',
 		'escape-html'                        => '1.2.0',
-		'format-library'                     => '1.4.6',
+		'format-library'                     => '1.4.9',
 		'hooks'                              => '2.2.0',
 		'html-entities'                      => '2.2.0',
 		'i18n'                               => '3.3.0',
 		'is-shallow-equal'                   => '1.2.0',
 		'keycodes'                           => '2.2.0',
-		'list-reusable-blocks'               => '1.3.5',
+		'list-reusable-blocks'               => '1.3.8',
 		'notices'                            => '1.3.0',
-		'nux'                                => '3.2.5',
+		'nux'                                => '3.2.8',
 		'plugins'                            => '2.2.0',
 		'priority-queue'                     => '1.1.0',
 		'redux-routine'                      => '3.2.0',
-		'rich-text'                          => '3.2.3',
+		'rich-text'                          => '3.2.6',
 		'shortcode'                          => '2.2.0',
 		'token-list'                         => '1.2.0',
 		'url'                                => '2.5.0',
@@ -879,7 +879,9 @@ function wp_default_scripts( &$scripts ) {
 		)
 	);
 
-	$scripts->add( 'wp-a11y', "/wp-includes/js/wp-a11y$suffix.js", array( 'jquery' ), false, 1 );
+	$scripts->add( 'wp-sanitize', "/wp-includes/js/wp-sanitize$suffix.js", array(), false, 1 );
+
+	$scripts->add( 'wp-a11y', "/wp-includes/js/wp-a11y$suffix.js", array( 'jquery', 'wp-sanitize' ), false, 1 );
 
 	$scripts->add( 'sack', "/wp-includes/js/tw-sack$suffix.js", array(), '1.6.1', 1 );
 
@@ -1077,7 +1079,7 @@ function wp_default_scripts( &$scripts ) {
 	// jQuery plugins
 	$scripts->add( 'jquery-color', '/wp-includes/js/jquery/jquery.color.min.js', array( 'jquery' ), '2.1.1', 1 );
 	$scripts->add( 'schedule', '/wp-includes/js/jquery/jquery.schedule.js', array( 'jquery' ), '20m', 1 );
-	$scripts->add( 'jquery-query', '/wp-includes/js/jquery/jquery.query.js', array( 'jquery' ), '2.1.7', 1 );
+	$scripts->add( 'jquery-query', '/wp-includes/js/jquery/jquery.query.js', array( 'jquery' ), '2.2.3', 1 );
 	$scripts->add( 'jquery-serialize-object', '/wp-includes/js/jquery/jquery.serialize-object.js', array( 'jquery' ), '0.2', 1 );
 	$scripts->add( 'jquery-hotkeys', "/wp-includes/js/jquery/jquery.hotkeys$suffix.js", array( 'jquery' ), '0.0.2m', 1 );
 	$scripts->add( 'jquery-table-hotkeys', "/wp-includes/js/jquery/jquery.table-hotkeys$suffix.js", array( 'jquery', 'jquery-hotkeys' ), false, 1 );
@@ -1175,8 +1177,6 @@ function wp_default_scripts( &$scripts ) {
 			),
 		)
 	);
-
-	$scripts->add( 'wp-sanitize', "/wp-includes/js/wp-sanitize$suffix.js", array( 'jquery' ), false, 1 );
 
 	$scripts->add( 'wp-backbone', "/wp-includes/js/wp-backbone$suffix.js", array( 'backbone', 'wp-util' ), false, 1 );
 
@@ -1469,7 +1469,7 @@ function wp_default_scripts( &$scripts ) {
 			'themePreviewUnavailable' => __( 'Sorry, you can&#8217;t preview new themes when you have changes scheduled or saved as a draft. Please publish your changes, or wait until they publish to preview new themes.' ),
 			'themeInstallUnavailable' => sprintf(
 				/* translators: %s: URL to Add Themes admin screen */
-				   __( 'You won&#8217;t be able to install new themes from here yet since your install requires SFTP credentials. For now, please <a href="%s">add themes in the admin</a>.' ),
+				__( 'You won&#8217;t be able to install new themes from here yet since your install requires SFTP credentials. For now, please <a href="%s">add themes in the admin</a>.' ),
 				esc_url( admin_url( 'theme-install.php' ) )
 			),
 			'publishSettings'         => __( 'Publish Settings' ),
@@ -1482,7 +1482,7 @@ function wp_default_scripts( &$scripts ) {
 	$scripts->add( 'customize-widgets', "/wp-admin/js/customize-widgets$suffix.js", array( 'jquery', 'jquery-ui-sortable', 'jquery-ui-droppable', 'wp-backbone', 'customize-controls' ), false, 1 );
 	$scripts->add( 'customize-preview-widgets', "/wp-includes/js/customize-preview-widgets$suffix.js", array( 'jquery', 'wp-util', 'customize-preview', 'customize-selective-refresh' ), false, 1 );
 
-	$scripts->add( 'customize-nav-menus', "/wp-admin/js/customize-nav-menus$suffix.js", array( 'jquery', 'wp-backbone', 'customize-controls', 'accordion', 'nav-menu' ), false, 1 );
+	$scripts->add( 'customize-nav-menus', "/wp-admin/js/customize-nav-menus$suffix.js", array( 'jquery', 'wp-backbone', 'customize-controls', 'accordion', 'nav-menu', 'wp-sanitize' ), false, 1 );
 	$scripts->add( 'customize-preview-nav-menus', "/wp-includes/js/customize-preview-nav-menus$suffix.js", array( 'jquery', 'wp-util', 'customize-preview', 'customize-selective-refresh' ), false, 1 );
 
 	$scripts->add( 'wp-custom-header', "/wp-includes/js/wp-custom-header$suffix.js", array( 'wp-a11y' ), false, 1 );
@@ -1580,7 +1580,7 @@ function wp_default_scripts( &$scripts ) {
 			)
 		);
 
-		$scripts->add( 'post', "/wp-admin/js/post$suffix.js", array( 'suggest', 'wp-lists', 'postbox', 'tags-box', 'underscore', 'word-count', 'wp-a11y' ), false, 1 );
+		$scripts->add( 'post', "/wp-admin/js/post$suffix.js", array( 'suggest', 'wp-lists', 'postbox', 'tags-box', 'underscore', 'word-count', 'wp-a11y', 'wp-sanitize' ), false, 1 );
 		did_action( 'init' ) && $scripts->localize(
 			'post',
 			'postL10n',
@@ -1693,7 +1693,7 @@ function wp_default_scripts( &$scripts ) {
 		$scripts->add( 'site-health', "/wp-admin/js/site-health$suffix.js", array( 'clipboard', 'jquery', 'wp-util', 'wp-a11y', 'wp-i18n' ), false, 1 );
 		$scripts->set_translations( 'site-health' );
 
-		$scripts->add( 'updates', "/wp-admin/js/updates$suffix.js", array( 'jquery', 'wp-util', 'wp-a11y' ), false, 1 );
+		$scripts->add( 'updates', "/wp-admin/js/updates$suffix.js", array( 'jquery', 'wp-util', 'wp-a11y', 'wp-sanitize' ), false, 1 );
 		did_action( 'init' ) && $scripts->localize(
 			'updates',
 			'_wpUpdatesSettings',
@@ -1943,7 +1943,7 @@ function wp_default_styles( &$styles ) {
 	$styles->add( 'wp-admin', false, array( 'dashicons', 'common', 'forms', 'admin-menu', 'dashboard', 'list-tables', 'edit', 'revisions', 'media', 'themes', 'about', 'nav-menus', 'widgets', 'site-icon', 'l10n' ) );
 
 	$styles->add( 'login', "/wp-admin/css/login$suffix.css", array( 'dashicons', 'buttons', 'forms', 'l10n' ) );
-	$styles->add( 'install', "/wp-admin/css/install$suffix.css", array( 'buttons' ) );
+	$styles->add( 'install', "/wp-admin/css/install$suffix.css", array( 'dashicons', 'buttons', 'forms', 'l10n' ) );
 	$styles->add( 'wp-color-picker', "/wp-admin/css/color-picker$suffix.css" );
 	$styles->add( 'customize-controls', "/wp-admin/css/customize-controls$suffix.css", array( 'wp-admin', 'colors', 'ie', 'imgareaselect' ) );
 	$styles->add( 'customize-widgets', "/wp-admin/css/customize-widgets$suffix.css", array( 'wp-admin', 'colors' ) );

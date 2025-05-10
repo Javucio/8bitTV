@@ -587,7 +587,9 @@ function rest_send_cors_headers( $value ) {
 		header( 'Access-Control-Allow-Origin: ' . $origin );
 		header( 'Access-Control-Allow-Methods: OPTIONS, GET, POST, PUT, PATCH, DELETE' );
 		header( 'Access-Control-Allow-Credentials: true' );
-		header( 'Vary: Origin' );
+		header( 'Vary: Origin', false );
+	} elseif ( ! headers_sent() && 'GET' === $_SERVER['REQUEST_METHOD'] && ! is_user_logged_in() ) {
+		header( 'Vary: Origin', false );
 	}
 
 	return $value;
@@ -839,6 +841,7 @@ function rest_cookie_check_errors( $result ) {
 	$result = wp_verify_nonce( $nonce, 'wp_rest' );
 
 	if ( ! $result ) {
+		add_filter( 'rest_send_nocache_headers', '__return_true', 20 );
 		return new WP_Error( 'rest_cookie_invalid_nonce', __( 'Cookie nonce is invalid' ), array( 'status' => 403 ) );
 	}
 
