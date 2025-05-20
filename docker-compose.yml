@@ -13,8 +13,8 @@ services:
    front:
      depends_on:
        - db
-     image: wordpress:4.9.8
-     #build: ./front
+     #image: wordpress:4.9.8
+     build: ./front
      volumes:
        - ./front:/var/www/html
        - ./front/proxy.conf:/etc/apache2/conf-enabled/proxy.conf
